@@ -15,7 +15,14 @@ namespace Tests
         [Test]
         public void Test1() // Cambiá el nombre para indicar qué estás probando
         {
-            // Insertá tu código  de pruebaaquí
+            //Configuración
+            const string expectedId = "12765672";
+            const string expectedName = "Tester Name";
+            //Ejecución
+            Person person = new Person (expectedName, expectedId);
+            //Comprobación
+            Assert.AreEqual(expectedId, person.ID);
+            Assert.AreEqual(expectedName, person.Name);
         }
     }
 }
